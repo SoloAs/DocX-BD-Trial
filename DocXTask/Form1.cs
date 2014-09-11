@@ -54,7 +54,7 @@ namespace DocXTask
                     if (CustomersGrid[i, e.RowIndex].Value != null)
                         textOperator.Words.Add(properties[i].Name, CustomersGrid[i, e.RowIndex].Value.ToString());
                 }
-                try
+                try //получить директора
                 {
                     textOperator.Head = db.People.Where(person => person.PositionId == "Директор").First();
                 }
