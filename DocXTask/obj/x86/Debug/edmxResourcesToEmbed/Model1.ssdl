@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OrdersDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="OrdersDBModelStoreContainer">
+    <EntitySet Name="Customer" EntityType="OrdersDBModel.Store.Customer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Person" EntityType="OrdersDBModel.Store.Person" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Person_Customer" Association="OrdersDBModel.Store.FK_Person_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Person" EntitySet="Person" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="Name" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="CityId" Type="smallint" />
+    <Property Name="Address" Type="nchar" MaxLength="10" />
+    <Property Name="PostIndex" Type="nchar" MaxLength="10" />
+    <Property Name="INN" Type="nchar" MaxLength="10" />
+    <Property Name="KPP" Type="nchar" MaxLength="10" />
+    <Property Name="OGRN" Type="nchar" MaxLength="10" />
+    <Property Name="PC" Type="nchar" MaxLength="10" />
+    <Property Name="Bank" Type="nvarchar" MaxLength="50" />
+    <Property Name="KC" Type="nchar" MaxLength="10" />
+    <Property Name="BIK" Type="nchar" MaxLength="10" />
+    <Property Name="Phone" Type="nchar" MaxLength="10" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="LegalAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="Site" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="Phone" />
+    </Key>
+    <Property Name="Name" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="Phone" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="PositionId" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="CustomerId" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="DateBirth" Type="nchar" MaxLength="10" />
+    <Property Name="NextDateBirth" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK_Person_Customer">
+    <End Role="Customer" Type="OrdersDBModel.Store.Customer" Multiplicity="1" />
+    <End Role="Person" Type="OrdersDBModel.Store.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

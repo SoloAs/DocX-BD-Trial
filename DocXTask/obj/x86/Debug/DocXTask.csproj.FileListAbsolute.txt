@@ -1,0 +1,14 @@
+D:\Work\DocXTask\DocXTask\bin\Debug\DocXTask.exe.config
+D:\Work\DocXTask\DocXTask\bin\Debug\DocXTask.exe
+D:\Work\DocXTask\DocXTask\bin\Debug\DocXTask.pdb
+D:\Work\DocXTask\DocXTask\bin\Debug\DocX.dll
+D:\Work\DocXTask\DocXTask\bin\Debug\EntityFramework.dll
+D:\Work\DocXTask\DocXTask\bin\Debug\EntityFramework.SqlServer.dll
+D:\Work\DocXTask\DocXTask\bin\Debug\EntityFramework.xml
+D:\Work\DocXTask\DocXTask\bin\Debug\EntityFramework.SqlServer.xml
+D:\Work\DocXTask\DocXTask\obj\x86\Debug\DocXTask.csprojResolveAssemblyReference.cache
+D:\Work\DocXTask\DocXTask\obj\x86\Debug\DocXTask.Properties.Resources.resources
+D:\Work\DocXTask\DocXTask\obj\x86\Debug\DocXTask.csproj.GenerateResource.Cache
+D:\Work\DocXTask\DocXTask\obj\x86\Debug\DocXTask.exe
+D:\Work\DocXTask\DocXTask\obj\x86\Debug\DocXTask.pdb
+D:\Work\DocXTask\DocXTask\obj\x86\Debug\DocXTask.MyForm.resources
